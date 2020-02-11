@@ -5,22 +5,55 @@
 
 body {
   background: #fcc;
-} 
+}
 
+.menu {
+  background: #0E0706;
+  line-height: 2em;
+  color: pink;
+}
 
+.menu:hover + nav {
+  display: flex;
+}
+
+nav {
+  display: none;
+  justify-content: center;
+  width: 15%;
+  flex-direction: column;
+}
+
+nav a {
+  padding: 1.25em 1.5em;
+  color: #ccc;
+  background: #555;
+  text-decoration: none;
+  transition: all 1.5s;
+}
+nav a:hover {
+  color: #dfd;
+  background: #797;
+}
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
-  body {
-    background: #cfc;
-  } 
+.menu{
+  display: none;
 }
 
+  body {
+    background: #cfc;
+  }
+}
 
+nav{
+  display: flex;
+  flex-direction: row;
+}
 
 /* DESKTOP STYLES */
 
@@ -28,7 +61,14 @@ body {
 
   /* applies to screens wider than 999px */
 
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    flex-direction: row;
+  }
+
   body {
     background: #ccf;
-  } 
+  }
 }
